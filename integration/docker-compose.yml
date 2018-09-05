@@ -1,8 +1,9 @@
 version: '3.1'
 
+
 services:
   generator:
-    image: localhost:55000/gen:ci-9
+    image: localhost:55000/gen:ci-${GEN_BUILD_NUMBER-13}
     ports:
       - "8080:80"
   mail:
@@ -10,6 +11,6 @@ services:
     ports:
       - "8025:8025"
   integration:
-    image: localhost:55000/gen:integration-1
+    image: localhost:55000/gen:integration-${BUILD_NUMBER-4}
     build: .
    
