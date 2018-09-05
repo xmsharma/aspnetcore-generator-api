@@ -1,6 +1,5 @@
 version: '3.1'
 
-
 services:
   generator:
     image: localhost:55000/gen:ci-${GEN_BUILD_NUMBER-13}
@@ -13,4 +12,6 @@ services:
   integration:
     image: localhost:55000/gen:integration-${BUILD_NUMBER-4}
     build: .
+    environment:
+      - TEAMCITY_PROJECT_NAME
    
