@@ -42,7 +42,7 @@ namespace api
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Generate Random Data API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Generate Random Data API V5");
             });
 
             var redirectRootToSwagger = new RewriteOptions()
